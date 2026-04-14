@@ -6,24 +6,24 @@
 <body>
 
 <h2>Dashboard</h2>
-<div id="userInfo"></div>
+
+<div id="userInfo">Loading...</div>
 
 <button id="logoutBtn">Logout</button>
 
+<!-- 🔥 Firebase App Logic -->
+<script type="module" src="app.js"></script>
+
 <script>
+  // 🔥 Fallback UI (in case Firebase takes time)
   const user = JSON.parse(localStorage.getItem("user"));
 
   if (!user) {
-    window.location.href = "/login.html";
+    window.location.href = "/";
+  } else {
+    document.getElementById("userInfo").innerText =
+      "Logged in as: " + user.email;
   }
-
-  document.getElementById("userInfo").innerText =
-    "Logged in as: " + user.email;
-
-  document.getElementById("logoutBtn").onclick = () => {
-    localStorage.removeItem("user");
-    window.location.href = "/login.html";
-  };
 </script>
 
 </body>
