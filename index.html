@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<script>
+  const user = localStorage.getItem("user");
+
+  if (user) {
+    window.location.href = "/dashboard.html";
+  }
+</script>
 <html>
 <head>
   <title>Login</title>
