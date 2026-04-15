@@ -32,7 +32,7 @@ const db = getFirestore(app);
 const provider = new GoogleAuthProvider();
 
 // 🔥 GET EXTENSION ID (PUT YOUR REAL ONE HERE)
-const EXTENSION_ID = "YOUR_EXTENSION_ID";
+const EXTENSION_ID = "bofdnnamficohokpcabkbbjjdnedbcjj";
 
 // =====================
 // 🔥 AUTH STATE HANDLER (AUTO LOGIN)
